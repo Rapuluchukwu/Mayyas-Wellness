@@ -63,14 +63,18 @@
 .sidebar-header {
     top: 20px;
     display: flex;
-    font-size: 1.1rem;
-    font-weight: bold;
     position: relative;
     align-items: center;
     margin-bottom: 0.5rem;
     padding-bottom: 0 1rem;
     justify-content: space-between;
     border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-header span,
+.sidebar-header span i {
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .sidebar-links {
@@ -84,11 +88,11 @@
 .main-navbar a {
     gap: 0.75rem;
     display: flex;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 8px;
+    font-weight: 700;
     padding: 12px 16px;
-    color: var(--black-color);
+    border-radius: 8px;
+    font-size: 1.133rem;
+    color: var(--text-color);
     transition: all 0.2s ease-in-out;
 }
 
@@ -105,6 +109,7 @@
 .sidebar-links a i,
 .main-navbar a i {
     width: 20px;
+    height: 17.5px;
     font-size: 1.1rem;
     text-align: center;
     color: var(--green-color);
