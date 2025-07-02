@@ -1,0 +1,100 @@
+/* Tablet (768px and above) */
+@media (min-width: 768px) {
+
+    header,
+    .mobile-navbar,
+    .overlay,
+    .sidebar-header {
+        display: none;
+    }
+
+    .main-navbar {
+        top: 0;
+        left: 0;
+        gap: 1rem;
+        width: 100%;
+        z-index: 1002;
+        display: flex;
+        position: fixed;
+        font-size: 1rem;
+        padding-top: 0.5rem;
+        background: white;
+        justify-content: space-evenly;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .main-navbar a {
+        flex-direction: column;
+    }
+
+    .carousel-container {
+        margin-top: 70px;
+        /* Adjust to your navbar height */
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .hero-title {
+        font-size: 4.5rem;
+        margin-bottom: 25px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+        max-width: 60%;
+        margin-bottom: 40px;
+    }
+
+    .cta-button {
+        padding: 20px 40px;
+        font-size: 1.3rem;
+    }
+
+    .progress-container {
+        bottom: 50px;
+        gap: 15px;
+    }
+
+    .progress-bar {
+        width: 100px;
+        height: 6px;
+    }
+
+    .content-wrapper {
+        padding: 60px;
+    }
+}
+
+/* Large desktop styles */
+@media (min-width: 1440px) {
+    .hero-title {
+        font-size: 5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.4rem;
+        max-width: 50%;
+    }
+}
+
+/* Reset animations for new slides */
+.carousel-slide:not(.active) .hero-title,
+.carousel-slide:not(.active) .hero-subtitle,
+.carousel-slide:not(.active) .cta-button {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: none;
+}
+
+.carousel-slide.active .hero-title {
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+.carousel-slide.active .hero-subtitle {
+    animation: fadeInUp 1s ease-out 1s forwards;
+}
+
+.carousel-slide.active .cta-button {
+    animation: fadeInUp 1s ease-out 1.5s forwards;
+}

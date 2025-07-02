@@ -1,0 +1,247 @@
+/* === Mobile Navbar === */
+.mobile-navbar {
+    width: 100%;
+    height: 66px;
+    z-index: 1001;
+    display: flex;
+    padding: 0 1rem;
+    position: fixed;
+    align-items: center;
+    background: var(--white-color);
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-navbar .logo {
+    height: 50px;
+}
+
+.menu-toggle i,
+.close-btn {
+    color: #333;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* === Sidebar Overlay === */
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1000;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    background: rgba(122, 121, 121, 0.4);
+}
+
+/* === Sidebar === */
+.sidebar {
+    top: 0;
+    gap: 1rem;
+    width: 80%;
+    left: -100%;
+    height: 80%;
+    z-index: 1001;
+    padding: 1rem;
+    display: flex;
+    position: fixed;
+    background: white;
+    flex-direction: column;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.sidebar-header {
+    top: 20px;
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: bold;
+    position: relative;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0 1rem;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-links {
+    gap: 0.75rem;
+    display: flex;
+    padding-top: 0.5rem;
+    flex-direction: column;
+}
+
+.sidebar-links a,
+.main-navbar a {
+    gap: 0.75rem;
+    display: flex;
+    /* margin: 0 auto; */
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 12px 16px;
+    align-self: flex-start;
+    color: var(--black-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar-links a:hover,
+.main-navbar a:hover {
+    transform: translateX(4px);
+    background-color: var(--sidebar-hover-color);
+}
+
+.sidebar-links a i,
+.main-navbar a i {
+    width: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--green-color);
+}
+
+.main-navbar {
+    display: none;
+}
+
+/* Hero section styling */
+.carousel-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.slide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.content-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    color: white;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 90%;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out 1s forwards;
+}
+
+.cta-button {
+    background-color: var(--green-color);
+    color: var(--white-color);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out 1.5s forwards;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* ================ */
+/* Simple loading bar */
+/* ================ */
+
+.loading-container {
+    position: absolute;
+    bottom: 0;
+    /* stick it to the bottom of the carousel */
+    left: 0;
+    z-index: 1007;
+    width: 100%;
+    height: 6px;
+    /* total track height */
+    background-color: #eee;
+    /* light gray track */
+    overflow: hidden;
+}
+
+.loading-bar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #2ca04f;
+    /* green fill */
+    transition: width 0.2s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/mobile.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <title>Mayyas Wellness Homepage</title>
+  </head>
+  <body>
+    <!-- Mobile Navbar -->
+    <header class="mobile-navbar">
+      <img src="assets/images/Mayyas-logo.jpg" alt="Mayyas Logo" class="logo" />
+      <div class="menu-toggle" onclick="openMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </header>
+
+    <!-- Blur Background Overlay -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <!-- Sidebar Menu -->
+    <aside class="sidebar" id="sidebar" aria-hidden="true" aria-modal="true">
+      <div class="sidebar-header" onclick="closeMenu()">
+        <span>Menu</span>
+        <i class="fa-solid fa-arrow-right close-btn"></i>
+      </div>
+      <nav class="sidebar-links">
+        <a href="#"><i class="fa-solid fa-leaf"></i> Spa Home</a>
+        <a href="#"><i class="fa-solid fa-person"></i> About</a>
+        <a href="#"><i class="fa-solid fa-spa"></i> Spa Services</a>
+        <a href="#"><i class="fa-solid fa-yin-yang"></i> Classes</a>
+      </nav>
+    </aside>
+
+    <nav class="main-navbar">
+      <a href=""><i class="fa-solid fa-leaf"></i>Spa Home</a>
+      <a href=""><i class="fa-solid fa-person"></i>About</a>
+      <a href="#">
+        <img
+          src="assets/images/Mayyas-logo.jpg"
+          alt="Mayyas Logo"
+          width="auto"
+          height="auto"
+          loading="eager"
+      /></a>
+      <a href=""><i class="fa-solid fa-spa"></i>Spa Services</a>
+      <a href=""><i class="fa-solid fa-yin-yang"></i>Classes</a>
+    </nav>
+
+    <!-- Hero section -->
+    <div class="carousel-container">
+      <!-- Slide 1 -->
+      <div class="carousel-slide active">
+        <img
+          src="assets/images/hero-image1.jpg"
+          alt="Spa relaxation room"
+          class="slide-image"
+        />
+        <div class="content-wrapper">
+          <h1 class="hero-title">REFRESH. RENEW. RELAX.</h1>
+          <p class="hero-subtitle">
+            Experience the calm you deserve with our professional spa
+            treatments. From soothing massages to revitalizing facials, we
+            create the perfect space for you to unwind and feel renewed.
+          </p>
+          <a class="cta-button">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-slide">
+        <img
+          src="assets/images/hero-image2.jpg"
+          alt="Therapeutic massage treatment"
+          class="slide-image"
+        />
+        <div class="content-wrapper">
+          <h1 class="hero-title">REFRESH. RENEW. RELAX.</h1>
+          <p class="hero-subtitle">
+            Experience the calm you deserve with our professional spa
+            treatments. From soothing massages to revitalizing facials, we
+            create the perfect space for you to unwind and feel renewed.
+          </p>
+          <a class="cta-button">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-slide">
+        <img
+          src="assets/images/hero-image3.jpg"
+          alt="Facial treatment room"
+          class="slide-image"
+        />
+        <div class="content-wrapper">
+          <h1 class="hero-title">REFRESH. RENEW. RELAX.</h1>
+          <p class="hero-subtitle">
+            Experience the calm you deserve with our professional spa
+            treatments. From soothing massages to revitalizing facials, we
+            create the perfect space for you to unwind and feel renewed.
+          </p>
+          <a class="cta-button">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel-slide">
+        <img
+          src="assets/images/hero-image4.jpg"
+          alt="Wellness package spa room"
+          class="slide-image"
+        />
+        <div class="content-wrapper">
+          <h1 class="hero-title">REFRESH. RENEW. RELAX.</h1>
+          <p class="hero-subtitle">
+            Experience the calm you deserve with our professional spa
+            treatments. From soothing massages to revitalizing facials, we
+            create the perfect space for you to unwind and feel renewed.
+          </p>
+          <a class="cta-button">Book Now</a>
+        </div>
+      </div>
+
+      <!-- After closing all .carousel-slide divs, just before the end of .carousel-container -->
+      <div class="loading-container">
+        <div class="loading-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
