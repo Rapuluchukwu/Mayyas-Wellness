@@ -18,12 +18,17 @@
         position: fixed;
         font-size: 1rem;
         padding-top: 0.5rem;
-        background: white;
         justify-content: space-evenly;
+        background: var(--white-color);
         transition: left 0.3s ease-in-out;
     }
 
     .main-navbar a {
+        display: flex;
+        align-self: unset;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
     }
 
